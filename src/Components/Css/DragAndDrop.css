@@ -1,0 +1,213 @@
+/* General Reset and Styling */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: 'Arial', sans-serif;
+}
+
+body, html {
+  height: 100%;
+  width: 100%;
+  background-color: #f0f2f5;
+  overflow: hidden;
+}
+
+.App {
+  display: flex;
+  flex-direction: column;
+  height: 100vh;
+  background: linear-gradient(to right, #f0f2f5, #ffffff);
+}
+
+/* Sidebar Styling */
+.sidebar {
+  width: 100%;
+  padding: 10px;
+  border-bottom: 1px solid #ddd;
+  background-color: #fff;
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  overflow-x: auto;
+}
+
+h3 {
+  margin-bottom: 10px;
+  color: #333;
+}
+
+.draggable-item {
+  margin: 5px;
+  padding: 5px;
+  width: 60px;
+  height: 60px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background-color: #fff;
+  border: 2px dashed #007bff;
+  border-radius: 5px;
+  cursor: grab;
+}
+
+.draggable-item img {
+  max-width: 100%;
+  max-height: 100%;
+}
+
+/* Drop Zone Styling */
+.upload-area {
+  flex: 1;
+  padding: 10px;
+  position: relative;
+  overflow: hidden;
+}
+
+input[type="file"] {
+  display: block;
+  margin-bottom: 10px;
+}
+
+.dropzone {
+  position: relative;
+  width: 100%;
+  height: 100%;
+  border: 2px dashed #007bff;
+  border-radius: 10px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background-color: rgba(0, 0, 0, 0.05);
+}
+
+.uploaded-image {
+  width: 100%;
+  height: 100%;
+  object-fit: contain;
+  position: absolute;
+  top: 0;
+  left: 0;
+}
+
+.overlay {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: rgba(0, 123, 255, 0.2);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: #007bff;
+  font-size: 18px;
+  border-radius: 10px;
+}
+
+/* Dropped Item Styling */
+.dropped-item {
+  position: absolute;
+  cursor: pointer;
+  z-index: 10;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  transition: all 0.3s ease;
+  box-sizing: border-box;
+}
+
+.dropped-item:hover {
+  transform: scale(1.05);
+}
+
+.dropped-item img {
+  width: 100%;
+  height: 100%;
+  object-fit: contain;
+}
+
+.remove-button {
+  position: absolute;
+  top: -10px;
+  right: -10px;
+  background: #ff4d4d;
+  color: white;
+  border: none;
+  border-radius: 50%;
+  width: 20px;
+  height: 20px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  cursor: pointer;
+  transition: all 0.3s ease;
+}
+
+.remove-button:hover {
+  background: #ff1a1a;
+}
+
+.icon-image {
+  width: 40px;
+  height: 40px;
+  object-fit: contain;
+}
+
+/* Resize Handles */
+.resize-handle {
+  position: absolute;
+  background: rgba(0, 0, 0, 0.5);
+  border: 2px solid rgba(255, 255, 255, 0.5);
+  cursor: pointer;
+}
+
+.resize-handle-right {
+  width: 8px;
+  height: 100%;
+  right: 0;
+  top: 0;
+}
+
+.resize-handle-bottom {
+  width: 100%;
+  height: 8px;
+  bottom: 0;
+  left: 0;
+}
+
+.resize-handle-bottom-right {
+  width: 12px;
+  height: 12px;
+  bottom: 0;
+  right: 0;
+  cursor: se-resize;
+}
+
+.resize-handle-top {
+  width: 100%;
+  height: 8px;
+  top: 0;
+  left: 0;
+  cursor: n-resize;
+}
+
+.resize-handle-top-left {
+  width: 12px;
+  height: 12px;
+  top: 0;
+  left: 0;
+  cursor: nw-resize;
+}
+
+.content {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 100%;
+  height: 100%;
+}
+
+
+
