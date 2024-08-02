@@ -165,6 +165,7 @@ const DragAndDrop = () => {
 
   useEffect(() => {
     const canvas = canvasRef.current;
+    if (!canvas) return; // Check if canvas is not null before proceeding
     const ctx = canvas.getContext('2d');
 
     let drawing = false;
@@ -247,6 +248,7 @@ const DragAndDrop = () => {
 
   const handleClearCanvas = () => {
     const canvas = canvasRef.current;
+    if (!canvas) return; // Check if canvas is not null before proceeding
     const ctx = canvas.getContext('2d');
     ctx.clearRect(0, 0, canvas.width, canvas.height);
   };
